@@ -1,0 +1,45 @@
+{
+  "name": "pz2",
+  "version": "0.0.0",
+  "description": "My second homework",
+  "homepage": "https://github.com/MRBorovski/KPZ-2#readme",
+  "bugs": {
+    "url": "https://github.com/MRBorovski/KPZ-2/issues"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/MRBorovski/KPZ-2.git"
+  },
+  "license": "ISC",
+  "author": "Borovski",
+  "type": "commonjs",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1",
+    "build": "tsup src/index.ts --format cjs,esm --dts",
+    "lint": "eslint . --ext .ts",
+    "lint:fix": "eslint . --ext .ts --fix",
+    "format": "prettier --write .",
+    "format:check": "prettier --check .",
+    "typecheck": "tsc --noEmit",
+    "demo": "tsx src/demo.ts"
+  },
+  "dependencies": {
+    "dotenv": "^17.2.3",
+    "zod": "^4.1.12"
+  },
+  "devDependencies": {
+    "@commitlint/config-conventional": "^20.0.0",
+    "@eslint/js": "^9.39.1",
+    "@types/node": "^24.10.1",
+    "commitlint": "^20.1.0",
+    "eslint": "^9.39.1",
+    "eslint-config-prettier": "^10.1.8",
+    "husky": "^9.1.7",
+    "prettier": "^3.6.2",
+    "tsup": "^8.5.1",
+    "tsx": "^4.20.6",
+    "typescript": "^5.9.3",
+    "typescript-eslint": "^8.46.4"
+  }
+}
