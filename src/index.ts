@@ -1,26 +1,19 @@
 import { config } from './config.js';
 
-// базові функції
-export function add(a: number, b: number): number {
-  return a + b;
+export function add(values: number[]): number {
+  return values.reduce((acc, x) => acc + x, 0);
 }
-
 export function capitalize(s: string): string {
   return s.charAt(0).toUpperCase() + s.slice(1);
 }
-
-// складний тип і форматер
 export type NumberFormatOptions = {
   precision?: number;
   locale?: string;
 };
-
 export function formatNumber(value: number, options?: NumberFormatOptions): string {
   const precision = options?.precision ?? config.APP_PRECISION;
   return value.toFixed(precision);
 }
-
-// НОВЕ: інтерфейс і generic-функція
 export interface User {
   id: number;
   name: string;
@@ -38,7 +31,6 @@ export function groupBy<T>(arr: T[], key: keyof T): Record<string, T[]> {
   );
 }
 
-// НОВЕ: клас Logger і тип LogLevel
 export type LogLevel = 'silent' | 'info' | 'debug';
 
 export class Logger {
